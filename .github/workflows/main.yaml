@@ -17,7 +17,7 @@ jobs:
       - name: Install modules
         run: pnpm install
 
-      - run pnpm run lint
+      - run: pnpm run lint
   UnitTest:
     # 单元测试任务
     runs-on: ubuntu-latest
