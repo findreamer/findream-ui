@@ -7,6 +7,17 @@ on:
 jobs:
   Lint:
     # Lint 任务
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 7.2.1
+
+      - name: Install modules
+        run: pnpm install
+
+      - run pnpm run lint
   UnitTest:
     # 单元测试任务
     runs-on: ubuntu-latest
